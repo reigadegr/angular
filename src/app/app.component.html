@@ -1,0 +1,98 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+        <h1>大作业</h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="个人信息" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">个人</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="monitor">Monitor</a>
+          </li>
+    
+
+
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="平时作业" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test1">1</a>
+          </li>
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test2">2</a>
+          </li>
+
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test3">3</a>
+          </li>
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test4">4</a>
+          </li>
+          
+          
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test5">5</a>
+          </li>
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test6">6</a>
+          </li>
+          
+          
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test7">7</a>
+          </li>
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test8">8</a>
+          </li>
+
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test9">9</a>
+          </li>
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/test10">10</a>
+          </li>
+
+
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <nz-icon class="trigger" [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" />
+        </span>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,66 @@
+<div class="profile-container">
+    <h2>个人信息监控</h2>
+    
+    <div class="profile-section">
+      <h3>基本信息</h3>
+      <div class="profile-details">
+        <div class="detail-item">
+          <span class="label">姓名:</span>
+          <span class="value">{{userProfile.name}}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">年龄:</span>
+          <span class="value">{{userProfile.age}}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">性别:</span>
+          <span class="value">{{userProfile.gender}}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">邮箱:</span>
+          <span class="value">{{userProfile.email}}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">电话:</span>
+          <span class="value">{{userProfile.phone}}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">地址:</span>
+          <span class="value">{{userProfile.address}}</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="stats-section">
+      <h3>状态统计</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">{{stats.completedTasks}}</div>
+          <div class="stat-label">完成任务</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">{{stats.ongoingProjects}}</div>
+          <div class="stat-label">进行中项目</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">{{stats.performanceRating}}</div>
+          <div class="stat-label">绩效评分</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="additional-info">
+      <div class="detail-item">
+        <span class="label">职位:</span>
+        <span class="value">{{userProfile.occupation}}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">加入日期:</span>
+        <span class="value">{{userProfile.joinDate}}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">最后登录:</span>
+        <span class="value">{{userProfile.lastLogin}}</span>
+      </div>
+    </div>
+  </div>
