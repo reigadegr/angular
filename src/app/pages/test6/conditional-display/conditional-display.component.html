@@ -1,0 +1,24 @@
+<h2>条件显示示例</h2>
+
+<!-- 使用 ngIf 指令 -->
+<button (click)="toggleExtraInfo()">
+    {{ showExtraInfo ? '隐藏额外信息' : '显示额外信息' }}
+</button>
+<div *ngIf="showExtraInfo">
+    <p>这是额外的提示信息。</p>
+</div>
+
+<!-- 使用 ngSwitch 指令 -->
+<label for="optionSelect">选择一个选项: </label>
+<select id="optionSelect" [(ngModel)]="selectedOption" (change)="onOptionChange($event)">
+    <option value="option1">选项 1</option>
+    <option value="option2">选项 2</option>
+    <option value="option3">选项 3</option>
+</select>
+
+<div [ngSwitch]="selectedOption">
+    <p *ngSwitchCase="'option1'">你选择了选项 1。</p>
+    <p *ngSwitchCase="'option2'">你选择了选项 2。</p>
+    <p *ngSwitchCase="'option3'">你选择了选项 3。</p>
+    <p *ngSwitchDefault>无效的选择。</p>
+</div>    

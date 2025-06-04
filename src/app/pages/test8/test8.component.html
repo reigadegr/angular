@@ -1,1 +1,104 @@
-<p>test8 works!</p>
+<h2>详细个人信息表单</h2>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <!-- 姓名输入框 -->
+  <div>
+    <label for="name">姓名:</label>
+    <input type="text" id="name" name="name" ngModel required minlength="2" maxlength="20">
+    <span *ngIf="userForm.controls['name']?.hasError('required') && (userForm.controls['name']?.touched || userForm.submitted)">
+      姓名是必填项
+    </span>
+    <span *ngIf="userForm.controls['name']?.hasError('minlength') && (userForm.controls['name']?.touched || userForm.submitted)">
+      姓名至少需要 2 个字符
+    </span>
+    <span *ngIf="userForm.controls['name']?.hasError('maxlength') && (userForm.controls['name']?.touched || userForm.submitted)">
+      姓名最多不能超过 20 个字符
+    </span>
+  </div>
+
+  <!-- 性别单选框 -->
+  <div>
+    <label>性别:</label>
+    <input type="radio" id="male" name="gender" value="男" ngModel required>
+    <label for="male">男</label>
+    <input type="radio" id="female" name="gender" value="女" ngModel required>
+    <label for="female">女</label>
+    <span *ngIf="userForm.controls['gender']?.hasError('required') && (userForm.controls['gender']?.touched || userForm.submitted)">
+      请选择性别
+    </span>
+  </div>
+
+  <!-- 出生日期输入框 -->
+  <div>
+    <label for="birthDate">出生日期:</label>
+    <input type="date" id="birthDate" name="birthDate" ngModel required>
+    <span *ngIf="userForm.controls['birthDate']?.hasError('required') && (userForm.controls['birthDate']?.touched || userForm.submitted)">
+      请选择出生日期
+    </span>
+  </div>
+
+  <!-- 爱好复选框 -->
+  <div>
+    <label>爱好:</label>
+    <input type="checkbox" id="reading" name="hobbies" value="阅读" ngModel>
+    <label for="reading">阅读</label>
+    <input type="checkbox" id="sports" name="hobbies" value="运动" ngModel>
+    <label for="sports">运动</label>
+    <input type="checkbox" id="music" name="hobbies" value="音乐" ngModel>
+    <label for="music">音乐</label>
+    <input type="checkbox" id="travel" name="hobbies" value="旅行" ngModel>
+    <label for="travel">旅行</label>
+  </div>
+
+  <!-- 所在城市选择框 -->
+  <div>
+    <label for="city">所在城市:</label>
+    <select id="city" name="city" ngModel required>
+      <option value="">请选择城市</option>
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+    </select>
+    <span *ngIf="userForm.controls['city']?.hasError('required') && (userForm.controls['city']?.touched || userForm.submitted)">
+      请选择所在城市
+    </span>
+  </div>
+
+  <!-- 电子邮箱输入框 -->
+  <div>
+    <label for="email">电子邮箱:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+    <span *ngIf="userForm.controls['email']?.hasError('required') && (userForm.controls['email']?.touched || userForm.submitted)">
+      电子邮箱是必填项
+    </span>
+    <span *ngIf="userForm.controls['email']?.hasError('email') && (userForm.controls['email']?.touched || userForm.submitted)">
+      请输入有效的电子邮箱地址
+    </span>
+  </div>
+
+  <!-- 手机号码输入框 -->
+  <div>
+    <label for="phone">手机号码:</label>
+    <input type="tel" id="phone" name="phone" ngModel required pattern="[0-9]{11}">
+    <span *ngIf="userForm.controls['phone']?.hasError('required') && (userForm.controls['phone']?.touched || userForm.submitted)">
+      手机号码是必填项
+    </span>
+    <span *ngIf="userForm.controls['phone']?.hasError('pattern') && (userForm.controls['phone']?.touched || userForm.submitted)">
+      请输入有效的 11 位手机号码
+    </span>
+  </div>
+
+  <!-- 提交按钮 -->
+  <button type="submit">提交</button>
+</form>
+
+<div *ngIf="submitted">
+  <h3>提交的信息:</h3>
+  <p>姓名: {{ formData.name }}</p>
+  <p>性别: {{ formData.gender }}</p>
+  <p>出生日期: {{ formData.birthDate }}</p>
+  <p>爱好: {{ formData.hobbies }}</p>
+  <p>所在城市: {{ formData.city }}</p>
+  <p>电子邮箱: {{ formData.email }}</p>
+  <p>手机号码: {{ formData.phone }}</p>
+</div>

@@ -1,1 +1,21 @@
-<p>test2 222works!</p>
+<div class="horizontal-layout">
+  <app-component-one></app-component-one>
+  <app-component-two></app-component-two>
+  <app-component-three></app-component-three>
+</div>
+
+<div class="horizontal-mixed-layout">
+  <app-component-one></app-component-one>
+  <div class="vertical-sub-layout">
+    <app-component-two></app-component-two>
+    <app-component-three></app-component-three>
+  </div>
+</div>
+
+<div class="vertical-mixed-layout">
+  <app-component-one></app-component-one>
+  <div class="horizontal-sub-layout">
+    <app-component-two></app-component-two>
+    <app-component-three></app-component-three>
+  </div>
+</div>

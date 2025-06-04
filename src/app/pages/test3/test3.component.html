@@ -1,1 +1,11 @@
-<p>test3 works!</p>
+<h1>工匠精神展示</h1>
+<hr>
+<!-- 插入一张“工匠精神”相关的图片，这里使用占位符 -->
+<img [src]="imageUrl" alt="工匠精神">
+<br>
+<audio #audioPlayer [src]="audioUrl" controls></audio>
+<br>
+<button (click)="playAudio()">播放音乐</button>
+<button (click)="pauseAudio()">暂停音乐</button>
+<br>
+<app-timer-component></app-timer-component>

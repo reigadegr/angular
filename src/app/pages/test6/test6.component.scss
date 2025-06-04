@@ -1,0 +1,24 @@
+/* 可以设置整个应用的基本样式，比如 body 的样式 */
+body {
+  font-family: Arial, sans-serif; /* 设置字体 */
+  margin: 0; /* 去除默认的外边距 */
+  padding: 0; /* 去除默认的内边距 */
+  background-color: #f4f4f4; /* 设置背景颜色 */
+}
+
+/* 可以给应用的标题设置样式 */
+h1 {
+  color: #333; /* 设置文字颜色 */
+  text-align: center; /* 文字居中对齐 */
+  padding: 20px; /* 内边距 */
+}
+
+/* 如果 app.component.html 中有其他元素，也可以在这里设置对应的样式 */
+/* 例如，假设里面有一个 id 为 app-container 的 div */
+#app-container {
+  width: 80%; /* 设置宽度为父元素的 80% */
+  margin: 0 auto; /* 水平居中 */
+  background-color: white; /* 设置背景颜色为白色 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  padding: 20px; /* 内边距 */
+}

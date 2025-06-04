@@ -1,0 +1,9 @@
+<p [ngStyle]="styleObject">
+    这段文本的颜色、背景颜色、边框颜色、字体大小和字体样式会随机自动变化。
+</p>
+<p [ngClass]="{
+    'clicked': isClicked,
+    'hovered': isHovered
+}" (click)="toggleClass()" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    点击这段文本，它的颜色、背景颜色和边框颜色会发生变化。鼠标悬停也会有样式变化。
+</p>    

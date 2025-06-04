@@ -1,1 +1,62 @@
-<p>test7 works!</p>
+<h2>带数据的表格</h2>
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>姓名</th>
+    <th>年龄</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let person of people">
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.age }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2>九九乘法表</h2>
+<h3>正向九九乘法表</h3>
+<table border="1">
+  <tbody>
+  <tr *ngFor="let i of numbers; let rowIndex = index">
+    <td *ngFor="let j of numbers; let colIndex = index" [hidden]="colIndex > rowIndex">
+      {{ j }} x {{ i }} = {{ i * j }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>反向九九乘法表</h3>
+<table border="1">
+  <tbody>
+  <tr *ngFor="let i of numbers; let rowIndex = index">
+    <td *ngFor="let j of numbers; let colIndex = index" [hidden]="colIndex < rowIndex">
+      {{ j }} x {{ i }} = {{ i * j }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>左下九九乘法表</h3>
+<table border="1">
+  <tbody>
+  <tr *ngFor="let i of numbers; let rowIndex = index">
+    <td *ngFor="let j of numbers; let colIndex = index" [hidden]="colIndex < 9 - rowIndex">
+      {{ j }} x {{ i }} = {{ i * j }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>右下九九乘法表</h3>
+<table border="1">
+  <tbody>
+  <tr *ngFor="let i of numbers; let rowIndex = index">
+    <td *ngFor="let j of numbers; let colIndex = index" [hidden]="colIndex > 9 - rowIndex">
+      {{ j }} x {{ i }} = {{ i * j }}
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,18 @@
+p {
+    padding: 10px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.clicked {
+    color: white;
+    background-color: blue;
+    border: 2px solid red;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.hovered {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}    

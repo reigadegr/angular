@@ -1,0 +1,15 @@
+<div>
+    <label for="radius">圆柱体底圆半径:</label>
+    <input type="number" id="radius" [(ngModel)]="radius" (keyup.enter)="calculate()">
+</div>
+<div>
+    <label for="height">圆柱体高度:</label>
+    <input type="number" id="height" [(ngModel)]="height" (keyup.enter)="calculate()">
+</div>
+<button (click)="calculate()">计算</button>
+<div *ngIf="surfaceArea !== undefined">
+    <p>圆柱体表面积: {{ surfaceArea }}</p>
+</div>
+<div *ngIf="volume !== undefined">
+    <p>圆柱体体积: {{ volume }}</p>
+</div>    
