@@ -1,0 +1,54 @@
+<h2>Buttons Demo</h2>
+<div class="button-group">
+  <button nz-button nzType="primary">Primary Button</button>
+  <button nz-button nzType="default">Default Button</button>
+  <button nz-button nzType="dashed">Dashed Button</button>
+  <button nz-button nzType="text">Text Button</button>
+  <button nz-button nzType="link">Link Button</button>
+</div>
+
+<div class="button-group">
+  <button nz-button nzType="primary" nzShape="circle">
+    <span nz-icon nzType="search"></span>
+  </button>
+  <button nz-button nzType="primary" nzShape="round">
+    <span nz-icon nzType="search"></span>
+    Search
+  </button>
+  <button nz-button nzType="primary">
+    <span nz-icon nzType="search"></span>
+    Search
+  </button>
+</div>
+
+<nz-divider nzText="Icons"></nz-divider>
+
+<h2>Icons Demo</h2>
+<div class="icon-group">
+  <span nz-icon nzType="home" nzTheme="outline"></span>
+  <span nz-icon nzType="setting" nzTheme="fill"></span>
+  <span nz-icon nzType="heart" nzTheme="twotone" [nzTwotoneColor]="'#eb2f96'"></span>
+  <span nz-icon nzType="smile" nzTheme="outline"></span>
+  <span nz-icon nzType="frown" nzTheme="outline"></span>
+</div>
+
+<nz-divider nzText="Dividers"></nz-divider>
+
+<h2>Dividers Demo</h2>
+<p>Horizontal Dividers:</p>
+<p>Text above</p>
+<nz-divider></nz-divider>
+<p>Text below</p>
+
+<nz-divider nzText="With Text"></nz-divider>
+<nz-divider nzText="Left Text" nzOrientation="left"></nz-divider>
+<nz-divider nzText="Right Text" nzOrientation="right"></nz-divider>
+
+<p>Vertical Dividers:</p>
+<div style="display: flex; height: 50px;">
+  <span>Item 1</span>
+  <nz-divider nzType="vertical"></nz-divider>
+  <span>Item 2</span>
+  <nz-divider nzType="vertical"></nz-divider>
+  <span>Item 3</span>
+</div>

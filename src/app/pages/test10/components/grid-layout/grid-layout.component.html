@@ -1,0 +1,95 @@
+<h2>Grid Layout Demo</h2>
+
+<nz-divider nzText="Basic Grid"></nz-divider>
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <div class="grid-content">100%</div>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="12">
+    <div class="grid-content">50%</div>
+  </div>
+  <div nz-col nzSpan="12">
+    <div class="grid-content">50%</div>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="8">
+    <div class="grid-content">33.33%</div>
+  </div>
+  <div nz-col nzSpan="8">
+    <div class="grid-content">33.33%</div>
+  </div>
+  <div nz-col nzSpan="8">
+    <div class="grid-content">33.33%</div>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">25%</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">25%</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">25%</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">25%</div>
+  </div>
+</div>
+
+<nz-divider nzText="Gutter"></nz-divider>
+
+<div nz-row [nzGutter]="16">
+  <div nz-col nzSpan="6">
+    <div class="grid-content">col-6</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">col-6</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">col-6</div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div class="grid-content">col-6</div>
+  </div>
+</div>
+
+<nz-divider nzText="Responsive Grid"></nz-divider>
+
+<div nz-row>
+  <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4">
+    <div class="grid-content">Responsive</div>
+  </div>
+  <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4">
+    <div class="grid-content">Responsive</div>
+  </div>
+  <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4">
+    <div class="grid-content">Responsive</div>
+  </div>
+  <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4">
+    <div class="grid-content">Responsive</div>
+  </div>
+</div>
+
+<nz-divider nzText="Offset"></nz-divider>
+
+<div nz-row>
+  <div nz-col nzSpan="8">
+    <div class="grid-content">col-8</div>
+  </div>
+  <div nz-col nzSpan="8" nzOffset="8">
+    <div class="grid-content">col-8 offset-8</div>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="6" nzOffset="6">
+    <div class="grid-content">col-6 offset-6</div>
+  </div>
+  <div nz-col nzSpan="6" nzOffset="6">
+    <div class="grid-content">col-6 offset-6</div>
+  </div>
+</div>

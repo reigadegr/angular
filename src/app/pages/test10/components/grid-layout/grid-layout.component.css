@@ -1,0 +1,21 @@
+.grid-content {
+  min-height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  background: #1890ff;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.grid-content:nth-child(2n) {
+  background: #52c41a;
+}
+
+.grid-content:nth-child(3n) {
+  background: #faad14;
+}
+
+.grid-content:nth-child(4n) {
+  background: #f5222d;
+}

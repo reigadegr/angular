@@ -1,17 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from '../pet.model';
 import { PetsService } from '../pets.service';
-import {FormsModule} from '@angular/forms';
-import {TitleCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-pets',
   templateUrl: './pets.component.html',
-  imports: [
-    FormsModule,
-    TitleCasePipe
-  ],
-  styleUrls: ['./pets.component.scss']
+  standalone: false,
+  styleUrls: ['./pets.component.css']
 })
 export class PetsComponent implements OnInit {
   pets: Pet[] = [];
@@ -23,13 +18,13 @@ export class PetsComponent implements OnInit {
   constructor(private petsService: PetsService) { }
 
   ngOnInit(): void {
-    this.petsService.getPets().subscribe((pets: Pet[]) => {
+    this.petsService.getPets().subscribe(pets => {
       this.pets = pets;
       this.filteredPets = [...pets];
     });
 
     // 监听宠物数据变化
-    this.petsService.getPetsChangedListener().subscribe((pets: Pet[]) => {
+    this.petsService.getPetsChangedListener().subscribe(pets => {
       this.pets = pets;
       this.filterPets();
     });
@@ -46,7 +41,7 @@ export class PetsComponent implements OnInit {
   applyDiscount(): void {
     if (this.selectedType !== 'all') {
       this.petsService.applyBulkDiscount(this.selectedType, this.discountPercentage)
-        .subscribe((updatedPets: Pet[]) => {
+        .subscribe(updatedPets => {
           this.pets = updatedPets;
           this.filterPets();
         });

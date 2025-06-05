@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-add-pet',
   templateUrl: './add-pet.component.html',
+  standalone: false,
   styleUrls: ['./add-pet.component.css']
 })
 export class AddPetComponent implements OnInit {
@@ -52,4 +53,4 @@ export class AddPetComponent implements OnInit {
       alert('宠物添加成功！');
     });
   }
-}  
+}
