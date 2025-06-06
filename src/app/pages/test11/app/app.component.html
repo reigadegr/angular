@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>简易购物网站</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 30px auto; }
+    h2 { color: #1976d2; }
+    .prod-list, .cart-list { list-style: none; padding: 0; }
+    .prod-list li, .cart-list li { margin: 8px 0; display: flex; align-items: center; }
+    button { margin-left: 8px; }
+    .cart { margin-top: 36px; border-top: 1px solid #ddd; padding-top: 12px; }
+    .qty-inp { width: 36px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h2>商品列表</h2>
+  <ul class="prod-list">
+    <li>
+      苹果 ¥3
+      <button onclick="addToCart('苹果', 3)">加入购物车</button>
+    </li>
+    <li>
+      香蕉 ¥2
+      <button onclick="addToCart('香蕉', 2)">加入购物车</button>
+    </li>
+    <li>
+      橙子 ¥4
+      <button onclick="addToCart('橙子', 4)">加入购物车</button>
+    </li>
+  </ul>
+
+  <div class="cart">
+    <h2>购物车</h2>
+    <ul class="cart-list" id="cartList"></ul>
+    <div id="total"></div>
+  </div>
+
+  <script>
+    let cart = {};
+
+    function updateCart() {
+      const cartList = document.getElementById('cartList');
+      cartList.innerHTML = '';
+      let total = 0;
+      Object.keys(cart).forEach(name => {
+        const item = cart[name];
+        total += item.price * item.qty;
+        const li = document.createElement('li');
+        li.innerHTML = `${name} ¥${item.price} × 
+          <input class="qty-inp" type="number" min="1" value="${item.qty}" 
+            onchange="changeQty('${name}', this.value)">
+          <button onclick="removeFromCart('${name}')">删除</button>`;
+        cartList.appendChild(li);
+      });
+      document.getElementById('total').innerText = '总价：¥' + total;
+    }
+
+    function addToCart(name, price) {
+      if (cart[name]) cart[name].qty++;
+      else cart[name] = { price, qty: 1 };
+      updateCart();
+    }
+
+    function removeFromCart(name) {
+      delete cart[name];
+      updateCart();
+    }
+
+    function changeQty(name, qty) {
+      qty = parseInt(qty);
+      if (qty > 0) cart[name].qty = qty;
+      updateCart();
+    }
+
+    updateCart();
+  </script>
+</body>
+</html>

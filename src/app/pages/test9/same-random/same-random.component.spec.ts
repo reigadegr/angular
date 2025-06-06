@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddPetComponent } from './add-pet.component';
+import { SameRandomComponent } from './same-random.component';
 
-describe('AddPetComponent', () => {
-  let component: AddPetComponent;
-  let fixture: ComponentFixture<AddPetComponent>;
+describe('SameRandomComponent', () => {
+  let component: SameRandomComponent;
+  let fixture: ComponentFixture<SameRandomComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddPetComponent]
+      imports: [SameRandomComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddPetComponent);
+    fixture = TestBed.createComponent(SameRandomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

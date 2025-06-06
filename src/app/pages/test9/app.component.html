@@ -1,17 +1,24 @@
-<nav class="bg-gray-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
-      <div class="flex items-center">
-        <span class="text-white font-bold text-xl">宠物商店管理系统</span>
-      </div>
-      <div class="flex items-center">
-        <a routerLink="/pets" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-700">宠物列表</a>
-        <a routerLink="/add-pet" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700">添加宠物</a>
-      </div>
-    </div>
+<div class="container">
+  <h1>随机数依赖注入演示</h1>
+  
+  <div class="components-container">
+    <!-- 相同随机数组件 - 共享单例 -->
+    <app-same-random></app-same-random>
+    <app-same-random></app-same-random>
+    <app-same-random></app-same-random>
+    
+    <hr>
+    
+    <!-- 不同随机数组件 - 每个实例单独提供 -->
+    <app-different-random></app-different-random>
+    <app-different-random></app-different-random>
+    <app-different-random></app-different-random>
+    
+    <hr>
+    
+    <!-- 每次生成新随机数 -->
+    <app-new-random></app-new-random>
+    <app-new-random></app-new-random>
+    <app-new-random></app-new-random>
   </div>
-</nav>
-
-<main class="container mx-auto p-4">
-  <router-outlet></router-outlet>
-</main>
+</div>

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PetsService } from './pets.service';
+import { RandomNumberService } from './random-number.service';
 
-describe('PetsService', () => {
-  let service: PetsService;
+describe('RandomNumberService', () => {
+  let service: RandomNumberService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PetsService);
+    service = TestBed.inject(RandomNumberService);
   });
 
   it('should be created', () => {

@@ -9,7 +9,8 @@ import { Test6Component } from './pages/test6/test6.component';
 import { Test7Component } from './pages/test7/test7.component';
 import { Test8Component } from './pages/test8/test8.component';
 import { AppComponent9 } from './pages/test9/app.component';
-import { AppComponent } from './pages/test10/app.component';
+import { AppComponent10 } from './pages/test10/app.component';
+import { AppComponent11 }  from './pages/test11/app/app.component';
 
 
 
@@ -26,5 +27,6 @@ export const routes: Routes = [
   { path:'test7', component: Test7Component },
   { path:'test8', component: Test8Component },
   { path:'test9', component: AppComponent9 },
-  { path:'test10', component: AppComponent },
+  { path:'test10', component: AppComponent10 },
+  { path:'test11', component: AppComponent11},
 ];

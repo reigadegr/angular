@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "name": "高级无线耳机",
+    "price": 899.00,
+    "description": "这款无线耳机采用先进的降噪技术，提供卓越的音质和舒适的佩戴体验，适合日常使用和旅行。",
+    "imageUrl": "https://picsum.photos/seed/headphones/400/400",
+    "category": "电子产品",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "智能手表",
+    "price": 1299.00,
+    "description": "这款智能手表具有心率监测、睡眠分析和运动追踪功能，还支持接收通知和控制音乐播放。",
+    "imageUrl": "https://picsum.photos/seed/smartwatch/400/400",
+    "category": "电子产品",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "超薄笔记本电脑",
+    "price": 5999.00,
+    "description": "这款超薄笔记本电脑性能强劲，续航持久，重量轻，适合办公和娱乐使用。",
+    "imageUrl": "https://picsum.photos/seed/laptop/400/400",
+    "category": "电子产品",
+    "rating": 4.9,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "专业相机",
+    "price": 3499.00,
+    "description": "这款专业相机具有高像素和快速对焦功能，适合摄影爱好者和专业摄影师使用。",
+    "imageUrl": "https://picsum.photos/seed/camera/400/400",
+    "category": "电子产品",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "name": "蓝牙音箱",
+    "price": 499.00,
+    "description": "这款蓝牙音箱音质出色，防水设计，适合户外使用，电池续航可达12小时。",
+    "imageUrl": "https://picsum.photos/seed/speaker/400/400",
+    "category": "电子产品",
+    "rating": 4.5,
+    "inStock": false
+  },
+  {
+    "id": 6,
+    "name": "运动背包",
+    "price": 299.00,
+    "description": "这款运动背包容量大，有多个隔层，适合旅行和日常使用，采用防水面料制作。",
+    "imageUrl": "https://picsum.photos/seed/backpack/400/400",
+    "category": "箱包",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "商务手提包",
+    "price": 599.00,
+    "description": "这款商务手提包采用高品质皮革制作，设计简约大方，适合商务场合使用。",
+    "imageUrl": "https://picsum.photos/seed/briefcase/400/400",
+    "category": "箱包",
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "旅行行李箱",
+    "price": 899.00,
+    "description": "这款旅行行李箱采用耐用的PC材质，四轮万向设计，内部结构合理，容量适中。",
+    "imageUrl": "https://picsum.photos/seed/suitcase/400/400",
+    "category": "箱包",
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "休闲运动鞋",
+    "price": 399.00,
+    "description": "这款休闲运动鞋采用透气网面和缓震鞋底，穿着舒适，适合日常活动和运动。",
+    "imageUrl": "https://picsum.photos/seed/shoes/400/400",
+    "category": "鞋服",
+    "rating": 4.7,
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "时尚连衣裙",
+    "price": 299.00,
+    "description": "这款时尚连衣裙采用优质面料制作，设计简约优雅，适合多种场合穿着。",
+    "imageUrl": "https://picsum.photos/seed/dress/400/400",
+    "category": "鞋服",
+    "rating": 4.9,
+    "inStock": true
+  }
+]
+  

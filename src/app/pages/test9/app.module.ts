@@ -1,34 +1,23 @@
-// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
-import {AppComponent9} from './app.component';
-import { PetsComponent } from './pets/pets.component';
-import { AddPetComponent } from './add-pet/add-pet.component';
-import { PetsService } from './pets.service';
+import { AppComponent } from './app.component';
+import { SameRandomComponent } from './same-random/same-random.component';
+import { DifferentRandomComponent } from './different-random/different-random.component';
+import { NewRandomComponent } from './new-random/new-random.component';
+import { RandomNumberService } from './random-number.service';
 
 @NgModule({
   declarations: [
-    AppComponent9,
-    PetsComponent,
-    AddPetComponent,
+    AppComponent,
+    SameRandomComponent,
+    DifferentRandomComponent,
+    NewRandomComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: 'pets', component: PetsComponent },
-      { path: 'add-pet', component: AddPetComponent },
-      { path: '', redirectTo: 'pets', pathMatch: 'full' },
-      { path: '**', redirectTo: 'pets' }
-    ])
+    BrowserModule
   ],
-  providers: [PetsService],
-  bootstrap: [AppComponent9]
+  providers: [RandomNumberService], // 在根模块提供服务
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
